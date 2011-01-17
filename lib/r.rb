@@ -1,17 +1,18 @@
 
 # lib/r.rb
 module R
- # def self.included(base)
- #   base.extend ClassMethods
- # end
- # 
- # def ensure_unique(name)
- #   begin
- #     self[name] = yield
- #   end while self.class.exists?(name => self[name])
- # end
- # 
- # module ClassMethods
+ 
+ def self.included(base)
+   base.extend ClassMethods
+ end
+ 
+ def ensure_unique(name)
+   begin
+     self[name] = yield
+   end while self.class.exists?(name => self[name])
+ end
+ 
+ module ClassMethods
  #   
  #   def uniquify(*args, &block)
  #     options = { :length => 8, :chars => ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a }
@@ -28,8 +29,13 @@ module R
  #       end
  #     end
  #   end
- #   
- # end
+ #  
+ 
+  def carlessify
+    puts 'TODO :)'
+  end
+  
+ end
 end
 
 class ActiveRecord::Base

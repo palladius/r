@@ -4,7 +4,7 @@ require 'echoe'
 
 # Copied from RyanBates: http://railscasts.com/episodes/135-making-a-gem
 
-Echoe.new('r', '0.0.2' ) do |p|
+Echoe.new('r', '0.0.3' ) do |p|
   p.description    = "My second gem, and most minimalistic."
   p.url            = "http://github.com/palladius/r"
   p.author         = "Riccardo C."
