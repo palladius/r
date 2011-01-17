@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-#version = File.read( 'VERSION' ) rescue "0.0.42_bugged"
+# Copied from RyanBates: http://railscasts.com/episodes/135-making-a-gem
 
 Echoe.new('r', '0.0.1' ) do |p|
   p.description    = "My second gem, and most minimalistic."
@@ -19,3 +19,5 @@ Echoe.new('r', '0.0.1' ) do |p|
   ]
   p.development_dependencies = [ ]
 end
+
+Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
